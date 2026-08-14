@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>אודותי | יוליה קרמר, דיאטנית קלינית ומומחית ויסות מערכת העצבים</title>
+<meta name="description" content="הסיפור של יוליה קרמר, דיאטנית קלינית עם B.Sc בביולוגיה מולקולרית ומדריכת יוגה מוסמכת, שפיתחה שיטה לשחרור משחיקה וסטרס כרוני.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF6F0;--cm:#F3EBE1;
+  --teal:#6E2639;--td:#55182B;--tl:rgba(110,38,57,.10);
+  --gold:#C97B5A;--gold-ink:#A85535;--blue-soft:#F5E9DC;--gl:rgba(201,123,90,.16);
+  --dark:#3B2A2A;--mid:#6B564C;--light:#8E7A6C;--bdr:#E8DCCB;
+}
+body{font-family:'Assistant',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:var(--dark);direction:rtl;background:var(--cream)}
+h1,h2,h3,h4,h5,.logo,.flogo{font-family:'Rubik',sans-serif;font-weight:500}.logo,.flogo{font-weight:400;letter-spacing:1.5px}.mk svg{display:inline-block}
+
+/* NAV */
+nav{background:var(--cream);padding:18px 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+.logo{font-size:18px;font-weight:800;text-decoration:none;color:var(--dark)}.logo em{color:var(--teal);font-style:normal}
+.nl{display:flex;gap:26px}.nl a{font-size:13px;color:var(--mid);text-decoration:none;font-weight:500}.nl a:hover{color:var(--teal)}.nl a.active{color:var(--teal);font-weight:700}
+.nc{background:var(--teal);color:#fff;border:none;padding:9px 22px;border-radius:22px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none}
+
+/* HERO */
+.hero{background:var(--cream);padding:72px 56px 56px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center}
+.hero-img{border-radius:20px;overflow:hidden;height:480px;border:1px solid var(--bdr)}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-text .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.hero-text h1{font-size:38px;font-weight:800;line-height:1.2;color:var(--dark);margin-bottom:20px}
+.hero-text h1 em{color:var(--teal);font-style:normal}
+.hero-text p{font-size:17px;line-height:1.85;color:var(--mid);margin-bottom:16px}
+.hero-text p strong{color:var(--dark);font-weight:600}
+.creds-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.cred{background:var(--tl);color:var(--td);font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px}
+
+/* STORY */
+.story{background:white;padding:80px 56px}
+.story-inner{max-width:760px;margin:0 auto}
+.story .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.story h2{font-size:30px;font-weight:800;line-height:1.3;color:var(--dark);margin-bottom:36px}
+.story-block{margin-bottom:40px}
+.story-block h3{font-size:17px;font-weight:800;color:var(--teal);margin-bottom:12px}
+.story-block p{font-size:16px;line-height:1.85;color:var(--mid)}
+.story-block p+p{margin-top:14px}
+.quote-block{background:var(--cream);border-right:4px solid var(--teal);padding:20px 24px;border-radius:0 12px 12px 0;margin:32px 0;font-size:17px;font-weight:500;color:var(--dark);line-height:1.7;font-style:italic}
+
+/* METHOD */
+.method{background:var(--cream);padding:80px 56px}
+.method-inner{max-width:900px;margin:0 auto}
+.method .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.method h2{font-size:30px;font-weight:800;line-height:1.3;color:var(--dark);margin-bottom:48px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pil{background:white;border-radius:16px;padding:28px 24px;border:1px solid var(--bdr)}
+.pico{width:52px;height:52px;border-radius:14px;background:var(--tl);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.pil h3{font-size:15px;font-weight:800;margin-bottom:10px;color:var(--dark)}
+.pil p{font-size:13px;line-height:1.7;color:var(--mid)}
+
+/* TRAINING */
+.training{background:white;padding:80px 56px}
+.training-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.training .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.training h2{font-size:30px;font-weight:800;color:var(--dark);margin-bottom:8px}
+.training-sub{font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:32px}
+.train-list{list-style:none}
+.train-list li{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--bdr);font-size:14px;color:var(--dark)}
+.train-list li:last-child{border-bottom:none}
+.train-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);margin-top:5px;flex-shrink:0}
+.train-list li strong{display:block;font-weight:700;margin-bottom:2px}
+.train-list li span{color:var(--mid);font-size:13px}
+.training-quote{background:var(--cm);border-radius:16px;padding:32px 28px}
+.tq-text{font-size:16px;line-height:1.8;color:var(--dark);font-style:italic;margin-bottom:20px}
+.tq-text::before{content:'"';font-size:36px;color:var(--teal);line-height:1;display:block;margin-bottom:8px;font-style:normal}
+.tq-auth{font-size:13px;font-weight:700;color:var(--mid)}
+
+/* COURSE SOON */
+.course-soon{background:linear-gradient(135deg,#6E2639,#471524);padding:80px 56px;text-align:center}
+.course-soon .st{color:var(--gold);display:block;margin-bottom:16px;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
+.cs-tag{display:inline-block;background:var(--gold);color:var(--td);font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:20px;letter-spacing:.5px}
+.course-soon h2{font-size:32px;font-weight:800;color:#fff;line-height:1.3;margin-bottom:16px;max-width:660px;margin-left:auto;margin-right:auto}
+.course-soon p{font-size:16px;color:rgba(255,255,255,.7);line-height:1.8;max-width:560px;margin:0 auto 36px}
+.cs-form{display:flex;gap:12px;max-width:440px;margin:0 auto}
+.cs-form input{flex:1;padding:13px 16px;border:none;border-radius:10px;font-size:14px;font-family:inherit;direction:rtl;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.cs-form input::placeholder{color:rgba(255,255,255,.5)}
+.cs-form input:focus{outline:none;background:rgba(255,255,255,.18)}
+.cs-form button{background:var(--gold);color:var(--td);border:none;padding:13px 22px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap}
+.cs-form button:hover{background:#B5673F}
+.cs-note{font-size:12px;color:rgba(255,255,255,.4);margin-top:10px}
+.cs-features{display:flex;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap}
+.cs-feat{text-align:center;color:rgba(255,255,255,.6);font-size:13px}
+.cs-feat strong{display:block;font-size:20px;color:#fff;margin-bottom:4px}
+
+/* CTA */
+.cta-sec{background:var(--cm);padding:72px 56px;text-align:center;border-top:1px solid var(--bdr)}
+.cta-sec h2{font-size:28px;font-weight:800;color:var(--dark);margin-bottom:12px;max-width:560px;margin-left:auto;margin-right:auto}
+.cta-sec p{font-size:15px;color:var(--mid);line-height:1.8;max-width:480px;margin:0 auto 32px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-main{background:var(--gold);color:var(--td);padding:14px 28px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;display:inline-block}
+.btn-main:hover{background:#B5673F}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:14px 28px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none}
+
+/* FOOTER */
+.sf{background:#111;color:#888;padding:24px 56px;text-align:center;font-size:12px}
+.sf a{color:var(--teal);text-decoration:none}
+
+/* FLOATING WA */
+.waf{position:fixed;bottom:28px;left:28px;z-index:888;background:#25D366;color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(37,211,102,.4)}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}.nl{display:none}
+  .hero{grid-template-columns:1fr;padding:40px 20px}.hero-img{height:320px}
+  .story,.method,.training,.course-soon,.cta-sec{padding:48px 20px}
+  .pillars{grid-template-columns:1fr}
+  .training-inner{grid-template-columns:1fr}
+  .cs-form{flex-direction:column}
+  .cta-btns{flex-direction:column;align-items:center}
+}
+
+/* ===== SITE REFRESH ===== */
+nav{background:var(--teal);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 2px 16px rgba(110,38,57,.20)}
+.logo{color:#fff}.logo em{color:var(--gold)}
+.nl a{color:rgba(255,255,255,.82)}.nl a:hover{color:var(--gold)}
+.nc{background:var(--gold);color:var(--td)}.nc:hover{background:#B5673F}
+.st{color:var(--gold-ink)}.ts{color:var(--gold-ink)}
+.fbsec .st,.fcta .st{color:var(--gold)}
+nav,section,.hero,.sf,footer{padding-inline:max(56px,calc((100% - 1200px) / 2))}
+.h2,.sh{font-weight:700}
+.pc,.sc,.pil,.tc,.bc{box-shadow:0 1px 3px rgba(110,38,57,.05);transition:transform .22s ease,box-shadow .22s ease}
+.pc:hover,.sc:hover,.pil:hover,.tc:hover,.bc:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(110,38,57,.10)}
+.sf{background:var(--teal)}
+@media(max-width:768px){nav,section,.hero,.sf,footer{padding-inline:20px}}
+.eic{width:16px;height:16px;vertical-align:-3px}
+.pico .eic{width:26px;height:26px;color:var(--teal)}
+.cs-tag .eic{width:13px;height:13px;vertical-align:-2px;margin-left:3px}
+.cs-feat .eic{width:24px;height:24px;color:var(--gold)}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/message/7RMALPBGH2KQF1" class="waf" target="_blank">
+  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  וואטסאפ
+</a>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">יוליה קרמר <em class="mk"><svg width="24" height="24" viewBox="0 0 100 100" style="vertical-align:-5px" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="#E8D5C0" stroke-width="4"/><path d="M50 80 C50 55, 62 38, 80 30 C78 55, 66 72, 50 80 Z" fill="#FAF6F0"/><path d="M50 80 C50 55, 38 38, 20 30 C22 55, 34 72, 50 80 Z" fill="#C97B5A"/></svg></em></a>
+  <div class="nl">
+    <a href="about.html" class="active">אודותי</a>
+    <a href="services.html">שירותים</a>
+    <a href="magazine.html">מגזין</a>
+    <a href="organizations.html">לארגונים</a>
+    <a href="contact.html">צור קשר</a>
+  </div>
+  <a href="https://wa.me/message/7RMALPBGH2KQF1" class="nc">לתיאום פגישה</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img">
+    <img src="about.jpg" alt="יוליה קרמר, דיאטנית קלינית ומומחית ויסות מערכת העצבים">
+  </div>
+  <div class="hero-text">
+    <span class="st">אודותי</span>
+    <h1>ביולוגיה מולקולרית,<br>תזונה קלינית, יוגה.<br>ו<em>סיפור אישי</em> שחיבר את הכל.</h1>
+    <p>אני יוליה קרמר. עשיתי את הדרך הארוכה, למדתי את המדע וקיבלתי את התעודות, ובכל זאת גיליתי שלהבין את הגוף זה לא אותו דבר כמו לדעת איך לעזור לו.</p>
+    <p><strong>משם התחילה השיטה שלי:</strong> לחבר בין הידע המדעי לבין הגוף עצמו, דרך תזונה, ויסות מערכת העצבים ותנועה מודעת.</p>
+    <div class="creds-row">
+      <span class="cred">B.Sc בביולוגיה מולקולרית</span>
+      <span class="cred">דיאטנית קלינית</span>
+      <span class="cred">מדריכת יוגה מוסמכת</span>
+      <span class="cred">ויסות מערכת העצבים</span>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-inner">
+    <span class="st">הסיפור</span>
+    <h2>איך הגעתי לכאן, ולמה זה חשוב לכם</h2>
+
+    <div class="story-block">
+      <h3>זה התחיל במעבדה</h3>
+      <p>למדתי ביולוגיה מולקולרית כי רציתי להבין את הגוף ברזולוציה הגבוהה ביותר שקיימת. רמת התא, רמת ההורמון, רמת הנוירוטרנסמיטר.</p>
+      <p>אחר כך הוספתי דיאטה קלינית, כי הבנתי שתזונה היא אחת מהשפות הישירות ביותר שיש לנו לדבר עם הגוף. ואז יוגה, כי הבנתי שבלי תנועה ונשימה, שום פרוטוקול תזונה לא יחזיק לאורך זמן.</p>
+    </div>
+
+    <div class="quote-block">
+      "ישבתי על הרצפה של המטבח. מותשת. עם כל הכלים הנכונים ובלי יכולת להפעיל אף אחד מהם. זה הרגע שבו הבנתי שמשהו חסר."
+    </div>
+
+    <div class="story-block">
+      <h3>מה שלמדתי שלא כתוב בספרים</h3>
+      <p>טראומה, סטרס כרוני ועומס מתמשך ננעלים ברקמות, לא רק בראש. הגוף שנמצא שנים במצב ישרדות לא מתאפס בגלל שהחלטתם "לנוח יותר".</p>
+      <p>הוספתי שנים נוספות של עבודה: ויסות מערכת העצבים, יוגה סומטית. עד שהחלקים התחברו לשיטה שלמה, שמדברת גם עם המוח וגם עם הגוף.</p>
+    </div>
+
+    <div class="story-block">
+      <h3>מי נמצא אצלי היום</h3>
+      <p>אנשים שמבינים הכל בראש, ועדיין הגוף לא שומע. מנהלים, אימהות, אנשי הייטק, מטפלים, יזמים. אנשים שמחפשים פתרונות שמכבדים את השכל שלהם ופועלים על הגוף שלהם.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="method">
+  <div class="method-inner">
+    <span class="st">השיטה</span>
+    <h2>שלושה עולמות, שיטה אחת</h2>
+    <div class="pillars">
+      <div class="pil">
+        <div class="pico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><line x1="11" y1="6.7" x2="6" y2="16.3"/><line x1="13" y1="6.7" x2="18" y2="16.3"/><line x1="7" y1="18" x2="17" y2="18"/></svg></div>
+        <h3>ביולוגיה מולקולרית</h3>
+        <p>להבין מה קורה ברמת התא כשהמערכת הסימפתטית פעילה לאורך זמן, הקורטיזול גבוה והציר בין המעי למוח יוצא מאיזון. כימיה, הורמונים, מיקרוביום. לא תחושות, עובדות מדידות.</p>
+      </div>
+      <div class="pil">
+        <div class="pico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div>
+        <h3>נוירו-תזונה</h3>
+        <p>פרוטוקול תזונה שמדבר ישירות עם מערכת העצבים. מייצב סוכר, מאכיל את המיקרוביום, מונע את קריסת הצהריים.</p>
+      </div>
+      <div class="pil">
+        <div class="pico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M12.59 19.41A2 2 0 1 0 14 16H2"/><path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+        <h3>יוגה סומטית</h3>
+        <p>תנועה ונשימה שמשחררות מתח שננעל ברקמות. נשימת תהודה, הפעלת עצב הוואגוס. כלים שאפשר לעשות בכל מקום תוך דקות.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section class="training">
+  <div class="training-inner">
+    <div>
+      <span class="st">הכשרה ורקע</span>
+      <h2>מה שעומד מאחורי השיטה</h2>
+      <p class="training-sub">שנים של לימוד, התמחות וניסיון קליני, שמתרגמים לפרוטוקול שעובד.</p>
+      <ul class="train-list">
+        <li><div class="train-dot"></div><div><strong>B.Sc בביולוגיה מולקולרית</strong><span>הבסיס המדעי להבנת הגוף ברמה התאית</span></div></li>
+        <li><div class="train-dot"></div><div><strong>דיאטנית קלינית מוסמכת</strong><span>תזונה כפרוטוקול, לא כתפריט סתמי</span></div></li>
+        <li><div class="train-dot"></div><div><strong>מדריכת יוגה מוסמכת</strong><span>תנועה ונשימה כחלק ממנגנון ריפוי מלא</span></div></li>
+        <li><div class="train-dot"></div><div><strong>התמחות בויסות מערכת העצבים</strong><span>שחרור דפוסי סטרס שננעלו ברקמות</span></div></li>
+        <li><div class="train-dot"></div><div><strong>ניסיון קליני עם מאות לקוחות</strong><span>מנהלים, הורים, אנשי הייטק, עצמאים</span></div></li>
+      </ul>
+    </div>
+    <div class="training-quote">
+      <p class="tq-text">אני מכירה את מנגנוני הסטרס גם מהצד האקדמי וגם מתוך מסע אישי. זה מה שמאפשר לי לראות את מה שאחרים מפספסים.</p>
+      <div class="tq-auth">יוליה קרמר</div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSE COMING SOON -->
+<section class="course-soon">
+  <div class="cs-tag"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6z"/></svg> בקרוב</div>
+  <span class="st">הקורס הדיגיטלי</span>
+  <h2>Neuro-Resilience, הקורס הדיגיטלי</h2>
+  <p>כל השיטה, בקצב שלכם. תזונה, ויסות מערכת העצבים, נשימה ותנועה, בתוכנית שלב אחר שלב שניתן לעשות מכל מקום. הקורס בפיתוח. השאירו מייל ותהיו הראשונים לדעת כשיוצא.</p>
+  <div class="cs-form">
+    <input type="email" placeholder="המייל שלכם" aria-label="המייל שלכם">
+    <button>להצטרף לרשימת המתנה</button>
+  </div>
+  <p class="cs-note">אין ספאם. רק עדכון כשיוצא.</p>
+  <div class="cs-features">
+    <div class="cs-feat"><strong><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M6.5 15h11"/></svg></strong>מדע בשפת האנשים</div>
+    <div class="cs-feat"><strong><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.4-.6-.6-2.4z"/></svg></strong>כלים פרקטיים ליומיום</div>
+    <div class="cs-feat"><strong>⏱️</strong>בקצב שלכם</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <h2>רוצים להתחיל עכשיו, לפני הקורס?</h2>
+  <p>פגישת ייעוץ אישית, שם מיפוי הגוף שלכם ומקבלים כיוון ברור, גם אם לא ממשיכים.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/message/7RMALPBGH2KQF1" class="btn-main">לתיאום פגישת ייעוץ</a>
+    <a href="https://wa.me/message/7RMALPBGH2KQF1" class="btn-wa">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      וואטסאפ
+    </a>
+  </div>
+</section>
+
+<footer class="sf">© 2026 יוליה קרמר · <a href="privacy.html">פרטיות</a> · <a href="accessibility.html">נגישות</a> · קליניקה בהרצליה + זום</footer>
+<script src="tracking.js" defer></script>
+</body>
+</html>

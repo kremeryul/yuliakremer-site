@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>צור קשר | יוליה קרמר — דיאטנית קלינית ומומחית ויסות מערכת העצבים</title>
+<meta name="description" content="ליצירת קשר עם יוליה קרמר — תיאום פגישת ייעוץ, וואטסאפ, מייל. קליניקה בהרצליה ומפגשי זום.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF6F0;--cm:#F3EBE1;
+  --teal:#6E2639;--td:#55182B;--tl:rgba(110,38,57,.10);
+  --gold:#C97B5A;--gold-ink:#A85535;--blue-soft:#F5E9DC;--gl:rgba(201,123,90,.16);
+  --dark:#3B2A2A;--mid:#6B564C;--light:#8E7A6C;--bdr:#E8DCCB;
+}
+body{font-family:'Assistant',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:var(--dark);direction:rtl;background:var(--cream)}
+h1,h2,h3,h4,h5,.logo,.flogo{font-family:'Rubik',sans-serif;font-weight:500}.logo,.flogo{font-weight:400;letter-spacing:1.5px}.mk svg{display:inline-block}
+
+/* NAV */
+nav{background:var(--cream);padding:18px 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+.logo{font-size:18px;font-weight:800;text-decoration:none;color:var(--dark)}.logo em{color:var(--teal);font-style:normal}
+.nl{display:flex;gap:26px}.nl a{font-size:13px;color:var(--mid);text-decoration:none;font-weight:500}.nl a:hover{color:var(--teal)}.nl a.active{color:var(--teal);font-weight:700}
+.nc{background:var(--teal);color:#fff;border:none;padding:9px 22px;border-radius:22px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none}
+
+/* HERO */
+.hero{background:var(--cream);padding:72px 56px 48px;text-align:center}
+.hero .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.2;color:var(--dark);margin-bottom:18px}
+.hero h1 em{color:var(--teal);font-style:normal}
+.hero p{font-size:17px;line-height:1.8;color:var(--mid);max-width:560px;margin:0 auto}
+
+/* CONTACT CARDS */
+.ways{background:var(--cream);padding:8px 56px 64px}
+.ways-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.way{background:white;border:1px solid var(--bdr);border-radius:16px;padding:28px 20px;text-align:center;text-decoration:none;display:block;transition:border-color .2s,transform .2s}
+.way:hover{border-color:var(--teal);transform:translateY(-3px)}
+.way-ico{width:54px;height:54px;border-radius:14px;background:var(--tl);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.way h3{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:8px}
+.way p{font-size:13px;line-height:1.7;color:var(--mid);margin-bottom:12px}
+.way .val{font-size:14px;font-weight:700;color:var(--teal);word-break:break-word}
+
+/* FORM */
+.form-sec{background:white;padding:72px 56px}
+.form-inner{max-width:620px;margin:0 auto}
+.form-sec .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px;text-align:center}
+.form-sec h2{font-size:28px;font-weight:800;color:var(--dark);margin-bottom:10px;text-align:center}
+.form-sec .sub{font-size:15px;color:var(--mid);line-height:1.7;text-align:center;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13px;font-weight:700;color:var(--dark);margin-bottom:7px}
+.field input,.field textarea{width:100%;padding:13px 16px;border:1px solid var(--bdr);border-radius:10px;font-size:15px;font-family:inherit;direction:rtl;background:var(--cream);color:var(--dark)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--teal);background:white}
+.field textarea{resize:vertical;min-height:120px}
+.field .opt{color:var(--light);font-weight:500}
+.submit-btn{width:100%;background:var(--teal);color:#fff;border:none;padding:15px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+.submit-btn:hover{background:var(--td)}
+.form-note{font-size:12px;color:var(--light);text-align:center;margin-top:14px}
+.hp{position:absolute;left:-9999px}
+
+/* LOCATION */
+.loc{background:var(--cm);padding:64px 56px;text-align:center;border-top:1px solid var(--bdr)}
+.loc-inner{max-width:720px;margin:0 auto}
+.loc .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.loc h2{font-size:26px;font-weight:800;color:var(--dark);margin-bottom:28px}
+.loc-grid{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.loc-item{text-align:center}
+.loc-item .lico{font-size:28px;margin-bottom:10px}
+.loc-item strong{display:block;font-size:16px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.loc-item span{font-size:14px;color:var(--mid)}
+
+/* FOOTER */
+.sf{background:#111;color:#888;padding:24px 56px;text-align:center;font-size:12px}
+.sf a{color:var(--teal);text-decoration:none}
+
+/* FLOATING WA */
+.waf{position:fixed;bottom:28px;left:28px;z-index:888;background:#25D366;color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(37,211,102,.4)}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}.nl{display:none}
+  .hero{padding:48px 20px 36px}.hero h1{font-size:30px}
+  .ways{padding:8px 20px 48px}.ways-inner{grid-template-columns:1fr}
+  .form-sec,.loc{padding:48px 20px}
+  .loc-grid{gap:32px}
+}
+
+/* ===== SITE REFRESH ===== */
+nav{background:var(--teal);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 2px 16px rgba(110,38,57,.20)}
+.logo{color:#fff}.logo em{color:var(--gold)}
+.nl a{color:rgba(255,255,255,.82)}.nl a:hover{color:var(--gold)}
+.nc{background:var(--gold);color:var(--td)}.nc:hover{background:#B5673F}
+.st{color:var(--gold-ink)}.ts{color:var(--gold-ink)}
+.fbsec .st,.fcta .st{color:var(--gold)}
+nav,section,.hero,.sf,footer{padding-inline:max(56px,calc((100% - 1200px) / 2))}
+.h2,.sh{font-weight:700}
+.pc,.sc,.pil,.tc,.bc{box-shadow:0 1px 3px rgba(110,38,57,.05);transition:transform .22s ease,box-shadow .22s ease}
+.pc:hover,.sc:hover,.pil:hover,.tc:hover,.bc:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(110,38,57,.10)}
+.sf{background:var(--teal)}
+@media(max-width:768px){nav,section,.hero,.sf,footer{padding-inline:20px}}
+.eic{width:16px;height:16px;vertical-align:-3px}
+.lico .eic{width:26px;height:26px;color:var(--teal)}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/message/7RMALPBGH2KQF1" class="waf" target="_blank">
+  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  וואטסאפ
+</a>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">יוליה קרמר <em class="mk"><svg width="24" height="24" viewBox="0 0 100 100" style="vertical-align:-5px" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="#E8D5C0" stroke-width="4"/><path d="M50 80 C50 55, 62 38, 80 30 C78 55, 66 72, 50 80 Z" fill="#FAF6F0"/><path d="M50 80 C50 55, 38 38, 20 30 C22 55, 34 72, 50 80 Z" fill="#C97B5A"/></svg></em></a>
+  <div class="nl">
+    <a href="about.html">אודותי</a>
+    <a href="services.html">שירותים</a>
+    <a href="magazine.html">מגזין</a>
+    <a href="organizations.html">לארגונים</a>
+    <a href="contact.html" class="active">צור קשר</a>
+  </div>
+  <a href="https://wa.me/message/7RMALPBGH2KQF1" class="nc">לתיאום פגישה</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="st">צור קשר</span>
+  <h1>בואו <em>נדבר</em>.</h1>
+  <p>אם אתם חיים תחת עומס ולחץ כבר יותר מדי זמן, זה המקום להתחיל. כתבו לי בערוץ שנוח לכם, ונמצא יחד את הצעד הבא.</p>
+</section>
+
+<!-- CONTACT WAYS -->
+<section class="ways">
+  <div class="ways-inner">
+    <a href="https://wa.me/message/7RMALPBGH2KQF1" class="way" target="_blank">
+      <div class="way-ico">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <h3>וואטסאפ</h3>
+      <p>הדרך המהירה ביותר. כתבו לי הודעה ונתאם משם.</p>
+      <span class="val">לשליחת הודעה ←</span>
+    </a>
+
+    <a href="tel:0508486386" class="way">
+      <div class="way-ico">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#55182B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <h3>טלפון</h3>
+      <p>מעדיפים לדבר? התקשרו אליי.</p>
+      <span class="val" dir="ltr">050-848-6386</span>
+    </a>
+
+    <a href="mailto:hello@yuliakremer.com" class="way">
+      <div class="way-ico">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#55182B" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      </div>
+      <h3>מייל</h3>
+      <p>מעדיפים לכתוב בהרחבה? שלחו לי מייל.</p>
+      <span class="val">hello@yuliakremer.com</span>
+    </a>
+
+    <a href="https://www.instagram.com/yulkremer/" class="way" target="_blank">
+      <div class="way-ico">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#55182B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      </div>
+      <h3>אינסטגרם</h3>
+      <p>עוקבים אחרי התכנים היומיומיים שלי.</p>
+      <span class="val">@yulkremer ←</span>
+    </a>
+
+    <a href="https://www.facebook.com/yulia.kremer10" class="way" target="_blank">
+      <div class="way-ico">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#55182B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </div>
+      <h3>פייסבוק</h3>
+      <p>כלים ומחקרים בשפה פשוטה בעמוד שלי.</p>
+      <span class="val">לעמוד הפייסבוק ←</span>
+    </a>
+
+    <a href="#contact-form" class="way">
+      <div class="way-ico">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#55182B" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h3>טופס פנייה</h3>
+      <p>מלאו פרטים קצרים ואחזור אליכם.</p>
+      <span class="val">למילוי הטופס ←</span>
+    </a>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-sec" id="contact-form">
+  <div class="form-inner">
+    <span class="st">טופס פנייה</span>
+    <h2>ספרו לי בכמה מילים</h2>
+    <p class="sub">לא צריך לכתוב סיפור שלם. כמה שורות על מה שמביא אתכם לכאן, ואחזור אליכם.</p>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hp"><label>אל תמלאו את השדה הזה: <input name="bot-field"></label></p>
+
+      <div class="field">
+        <label for="name">שם מלא</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">מייל</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="field">
+        <label for="phone">טלפון <span class="opt">(לא חובה)</span></label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="field">
+        <label for="message">מה מביא אתכם?</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">לשליחת הפנייה</button>
+      <p class="form-note">הפרטים שלכם נשארים אצלי בלבד.</p>
+    </form>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="loc">
+  <div class="loc-inner">
+    <span class="st">איפה נפגשים</span>
+    <h2>מכל מקום, וגם פנים מול פנים</h2>
+    <div class="loc-grid">
+      <div class="loc-item">
+        <div class="lico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></svg></div>
+        <strong>מפגשי זום</strong>
+        <span>הדרך המרכזית שלי לעבוד, מכל מקום בארץ ובעולם</span>
+      </div>
+      <div class="loc-item">
+        <div class="lico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <strong>קליניקה בהרצליה</strong>
+        <span>מפגשים אישיים, לפי תיאום</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="sf">© 2026 יוליה קרמר · <a href="privacy.html">פרטיות</a> · <a href="accessibility.html">נגישות</a> · קליניקה בהרצליה + זום</footer>
+<script src="tracking.js" defer></script>
+</body>
+</html>

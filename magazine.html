@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>מגזין | יוליה קרמר</title>
+<meta name="description" content="מאמרים מבוססי מחקר על שחיקה, תזונה, מערכת העצבים, תנועה ושינה. מדע קשה לריפוי רך.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cream:#FAF6F0;--cm:#F3EBE1;--teal:#6E2639;--td:#55182B;--tl:rgba(110,38,57,.10);--gold:#C97B5A;--gold-ink:#A85535;--blue-soft:#F5E9DC;--gl:rgba(201,123,90,.16);--dark:#3B2A2A;--mid:#6B564C;--light:#8E7A6C;--bdr:#E8DCCB}
+body{font-family:'Assistant',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:var(--dark);direction:rtl;background:var(--cream);line-height:1.7}
+h1,h2,h3,h4,h5,.logo,.flogo{font-family:'Rubik',sans-serif;font-weight:500}.logo,.flogo{font-weight:400;letter-spacing:1.5px}.mk svg{display:inline-block}
+nav{background:var(--cream);padding:18px 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+.logo{font-size:18px;font-weight:800}.logo em{color:var(--teal);font-style:normal}
+.nl{display:flex;gap:26px}.nl a{font-size:13px;color:var(--mid);text-decoration:none;font-weight:500}.nl a:hover{color:var(--teal)}
+.nc{background:var(--teal);color:#fff;border:none;padding:9px 22px;border-radius:22px;font-size:13px;font-weight:700;cursor:pointer}
+.waf{position:fixed;bottom:28px;left:28px;z-index:888;background:#25D366;color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(37,211,102,.4)}
+.sf{background:#111;color:#888;padding:28px 56px;text-align:center;font-size:12px}.sf a{color:var(--teal);text-decoration:none}
+/* article */
+.artwrap{max-width:760px;margin:0 auto;padding:56px 24px 72px}
+.crumb{font-size:12px;color:var(--light);margin-bottom:18px}.crumb a{color:var(--teal);text-decoration:none}
+.artcat{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.arttitle{font-size:32px;font-weight:800;line-height:1.3;margin-bottom:28px;color:var(--dark)}
+.artbody p{font-size:16px;color:#3B2A2A;margin-bottom:18px}
+.artbody h2{font-size:22px;font-weight:800;margin:34px 0 14px;color:var(--td)}
+.artbody h3{font-size:18px;font-weight:700;margin:24px 0 10px}
+.artbody a{color:var(--td);font-weight:600}
+.artbody ul.rel{list-style:none;background:var(--tl);border-radius:12px;padding:18px 22px;margin:24px 0}
+.artbody ul.rel li{margin-bottom:10px;font-size:15px}
+.artbody ol.src{padding-right:20px;margin:14px 0 8px}
+.artbody ol.src li{font-size:12px;color:var(--mid);margin-bottom:8px;word-break:break-word}
+.artbody h2:first-child{margin-top:0}
+.backcta{background:linear-gradient(135deg,#6E2639,#471524);border-radius:16px;padding:34px 28px;text-align:center;margin-top:48px}
+.backcta h3{color:#fff;font-size:20px;font-weight:800;margin-bottom:10px}
+.backcta p{color:rgba(255,255,255,.75);font-size:14px;margin-bottom:20px}
+.backcta a{background:var(--teal);color:#fff;padding:13px 26px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;display:inline-block}
+/* magazine index */
+.mhead{padding:64px 56px 8px;text-align:center}
+.mhead .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold)}
+.mhead h1{font-size:34px;font-weight:800;margin:12px 0 14px}
+.mhead p{font-size:16px;color:var(--mid);max-width:620px;margin:0 auto}
+.mgrid{max-width:1100px;margin:0 auto;padding:40px 24px 72px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mcard{background:white;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column}
+.mcard:hover{box-shadow:0 6px 24px rgba(0,0,0,.09);transform:translateY(-2px)}
+.mthumb{height:120px;background:linear-gradient(135deg,var(--tl),var(--gl));display:flex;align-items:center;justify-content:center;font-size:40px}
+.mbody{padding:18px 20px}.mtag{font-size:10px;font-weight:700;color:var(--td);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.mcard h3{font-size:15px;font-weight:700;line-height:1.5}
+.mread{display:block;margin-top:12px;color:var(--teal);font-size:13px;font-weight:700}
+@media(max-width:768px){nav{padding:14px 20px}.nl{display:none}.mgrid{grid-template-columns:1fr;padding:28px 18px}.mhead{padding:40px 20px 4px}.arttitle{font-size:26px}}
+/* ===== SITE REFRESH ===== */
+nav{background:var(--teal);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 2px 16px rgba(110,38,57,.20)}
+.logo{color:#fff}.logo em{color:var(--gold)}
+.nl a{color:rgba(255,255,255,.82)}.nl a:hover{color:var(--gold)}
+.nc{background:var(--gold);color:var(--td)}.nc:hover{background:#B5673F}
+.st{color:var(--gold-ink)}.ts{color:var(--gold-ink)}
+.fbsec .st,.fcta .st{color:var(--gold)}
+nav,section,.hero,.sf,footer{padding-inline:max(56px,calc((100% - 1200px) / 2))}
+.h2,.sh{font-weight:700}
+.pc,.sc,.pil,.tc,.bc{box-shadow:0 1px 3px rgba(110,38,57,.05);transition:transform .22s ease,box-shadow .22s ease}
+.pc:hover,.sc:hover,.pil:hover,.tc:hover,.bc:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(110,38,57,.10)}
+.sf{background:var(--teal)}
+@media(max-width:768px){nav,section,.hero,.sf,footer{padding-inline:20px}}
+.eic{width:16px;height:16px;vertical-align:-3px}
+.mthumb .eic{width:44px;height:44px;color:var(--teal)}
+</style>
+</head>
+<body>
+<a href="https://wa.me/message/7RMALPBGH2KQF1" class="waf" target="_blank">
+  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  וואטסאפ</a>
+<nav>
+  <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">יוליה קרמר <em class="mk"><svg width="24" height="24" viewBox="0 0 100 100" style="vertical-align:-5px" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="#E8D5C0" stroke-width="4"/><path d="M50 80 C50 55, 62 38, 80 30 C78 55, 66 72, 50 80 Z" fill="#FAF6F0"/><path d="M50 80 C50 55, 38 38, 20 30 C22 55, 34 72, 50 80 Z" fill="#C97B5A"/></svg></em></a></div>
+  <div class="nl"><a href="about.html">אודותי</a><a href="services.html">שירותים</a><a href="organizations.html">לארגונים</a><a href="magazine.html">מגזין</a><a href="contact.html">צור קשר</a></div>
+  <a href="https://wa.me/message/7RMALPBGH2KQF1" class="nc" style="text-decoration:none">לתיאום פגישה</a>
+</nav>
+<div class="mhead">
+  <span class="st">המגזין</span>
+  <h1>מדע בשפה של בני אדם</h1>
+  <p>מאמרים מבוססי מחקר על מערכת העצבים, תזונה, תנועה ושינה. בלי רוחניות, עם מקורות שאפשר לבדוק.</p>
+</div>
+<div class="mgrid">
+<a class="mcard" href="burnout.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><rect x="2" y="7" width="16" height="10" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="10" x2="6" y2="14"/></svg></div><div class="mbody"><div class="mtag">מערכת העצבים</div><h3>שחיקה: מה שקורה בגוף לפני הקריסה</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="cortisol.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="mbody"><div class="mtag">מערכת העצבים</div><h3>קורטיזול: הורמון הלחץ שכדאי לאזן</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="hrv.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="mbody"><div class="mtag">מערכת העצבים</div><h3>HRV: המדד ששווה להכיר</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="microbiome.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><circle cx="12" cy="12" r="9"/><circle cx="9.5" cy="10" r="1"/><circle cx="14" cy="9" r="1"/><circle cx="12" cy="14" r="1.3"/><circle cx="15" cy="14.5" r="1"/></svg></div><div class="mbody"><div class="mtag">מערכת העצבים</div><h3>המיקרוביום: היצור שחי בתוככם שמדבר עם הראש</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="vagus.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="mbody"><div class="mtag">מערכת העצבים</div><h3>עצב הוואגוס: העצב הנודד שמחזיק את הבלם</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="mediterranean.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div><div class="mbody"><div class="mtag">תזונה</div><h3>תזונה ים תיכונית: דרך להרגיע את הגוף מבפנים</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="personalized-nutrition.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M3 10h18"/><path d="M20 10a8 8 0 0 1-16 0"/><path d="M12 10V6"/></svg></div><div class="mbody"><div class="mtag">תזונה</div><h3>תזונה מותאמת אישית: למה אין דיאטה אחת</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="protein.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><ellipse cx="12" cy="13" rx="6" ry="8"/><circle cx="12" cy="14" r="2.5"/></svg></div><div class="mbody"><div class="mtag">תזונה</div><h3>חלבון ושובע: למה אתם רעבים שעה אחרי</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="stress-eating.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div><div class="mbody"><div class="mtag">תזונה</div><h3>אכילה תחת סטרס: למה דווקא מתוק</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="sugar.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></svg></div><div class="mbody"><div class="mtag">תזונה</div><h3>סוכר ואנרגיה: למה אתם קורסים אחרי הצהריים</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="breathing.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M12.59 19.41A2 2 0 1 0 14 16H2"/><path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2"/></svg></div><div class="mbody"><div class="mtag">תנועה ונשימה</div><h3>הפלא שבנשימה: מסע מדעי אל מה שקורה בכל נשימה</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="micro-movement.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><circle cx="12" cy="13" r="8"/><polyline points="12 9 12 13 15 15"/><line x1="9" y1="2" x2="15" y2="2"/></svg></div><div class="mbody"><div class="mtag">תנועה ונשימה</div><h3>מיקרו-תנועה במשרד: שלוש דקות בין פגישות</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="movement.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><polyline points="15 19 12 22 9 19"/><polyline points="19 9 22 12 19 15"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg></div><div class="mbody"><div class="mtag">תנועה ונשימה</div><h3>תנועה מודעת לאנשים שיושבים כל היום</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="muscle-tension.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></svg></div><div class="mbody"><div class="mtag">תנועה ונשימה</div><h3>מתח בשרירים: למה הכתפיים אצל האוזניים</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="yoga.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><circle cx="12" cy="5.5" r="2.5"/><path d="M12 8v5"/><path d="M5 20a7 4 0 0 1 14 0z"/><path d="M8.5 13l3.5-1 3.5 1"/></svg></div><div class="mbody"><div class="mtag">תנועה ונשימה</div><h3>יוגה ומערכת העצבים: מה המדע מצא</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="blue-light.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div><div class="mbody"><div class="mtag">שינה</div><h3>אור כחול ושעון ביולוגי</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="caffeine.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 9h2a2 2 0 0 1 0 4h-2"/><line x1="7" y1="3" x2="7" y2="5"/><line x1="11" y1="3" x2="11" y2="5"/></svg></div><div class="mbody"><div class="mtag">שינה</div><h3>קפאין ושינה: למה הקפה של אחה&quot;צ פוגע</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="exercise-mood.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M12 2s5 4 5 9a5 5 0 0 1-10 0c0-2 1-3 1.5-4 .5 2 2 2.5 2 2.5 0-3 1.5-5 1.5-7z"/></svg></div><div class="mbody"><div class="mtag">שינה</div><h3>פעילות גופנית ומצב רוח</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="omega3.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M6.5 12c3-4 8.5-5 13-3.5-1.5 4-7 8-13 3.5z"/><path d="M19.5 8.5c1 1.5 1 5.5 0 7"/><circle cx="9" cy="11" r="0.6"/></svg></div><div class="mbody"><div class="mtag">שינה</div><h3>אומגה 3 ודלקת: מה הראיות אומרות</h3><span class="mread">לקריאה ←</span></div></a>
+<a class="mcard" href="sleep.html"><div class="mthumb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div><div class="mbody"><div class="mtag">שינה</div><h3>שינה והתאוששות: מה הגוף עושה כשאתם ישנים</h3><span class="mread">לקריאה ←</span></div></a>
+</div>
+<footer class="sf">© 2026 יוליה קרמר · קליניקה בהרצליה + זום · <a href="magazine.html">מגזין</a></footer>
+<script src="tracking.js" defer></script>
+</body>
+</html>

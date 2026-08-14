@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>לארגונים | יוליה קרמר — הרצאות וסדנאות לחוסן ולוויסות מערכת העצבים</title>
+<meta name="description" content="הרצאות, סדנאות ותוכניות לצוותים, כלים מדעיים לשחיקה, ויסות מערכת העצבים ותפקוד תחת עומס. מבוסס ביולוגיה, לא יום כיף שנשכח למחרת.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF6F0;--cm:#F3EBE1;
+  --teal:#6E2639;--td:#55182B;--tl:rgba(110,38,57,.10);
+  --gold:#C97B5A;--gold-ink:#A85535;--blue-soft:#F5E9DC;--gl:rgba(201,123,90,.16);
+  --dark:#3B2A2A;--mid:#6B564C;--light:#8E7A6C;--bdr:#E8DCCB;
+}
+body{font-family:'Assistant',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:var(--dark);direction:rtl;background:var(--cream)}
+h1,h2,h3,h4,h5,.logo,.flogo{font-family:'Rubik',sans-serif;font-weight:500}.logo,.flogo{font-weight:400;letter-spacing:1.5px}.mk svg{display:inline-block}
+
+/* NAV */
+nav{background:var(--cream);padding:18px 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+.logo{font-size:18px;font-weight:800;text-decoration:none;color:var(--dark)}.logo em{color:var(--teal);font-style:normal}
+.nl{display:flex;gap:26px}.nl a{font-size:13px;color:var(--mid);text-decoration:none;font-weight:500}.nl a:hover{color:var(--teal)}.nl a.active{color:var(--teal);font-weight:700}
+.nc{background:var(--teal);color:#fff;border:none;padding:9px 22px;border-radius:22px;font-size:13px;font-weight:700;cursor:pointer;text-decoration:none}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#6E2639,#471524);padding:80px 56px;text-align:center}
+.hero .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;color:#fff;margin-bottom:20px;max-width:760px;margin-left:auto;margin-right:auto}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{font-size:18px;line-height:1.8;color:rgba(255,255,255,.75);max-width:600px;margin:0 auto 36px}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-main{background:var(--gold);color:var(--td);padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;display:inline-block}
+.btn-main:hover{background:#B5673F}
+.btn-ghost{background:transparent;color:#fff;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;display:inline-block;border:1px solid rgba(255,255,255,.3)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+/* PROBLEM */
+.problem{background:white;padding:80px 56px}
+.problem-inner{max-width:960px;margin:0 auto;text-align:center}
+.problem .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.problem h2{font-size:30px;font-weight:800;line-height:1.3;color:var(--dark);margin-bottom:16px}
+.problem .lead{font-size:16px;line-height:1.85;color:var(--mid);max-width:640px;margin:0 auto 48px}
+.cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:right}
+.cost{background:var(--cream);border:1px solid var(--bdr);border-radius:16px;padding:28px 24px}
+.cost-ico{width:50px;height:50px;border-radius:13px;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.cost h3{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:10px}
+.cost p{font-size:14px;line-height:1.7;color:var(--mid)}
+
+/* MECHANISM */
+.mech{background:var(--cm);padding:72px 56px}
+.mech-inner{max-width:760px;margin:0 auto}
+.mech .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.mech h2{font-size:28px;font-weight:800;color:var(--dark);margin-bottom:24px;line-height:1.3}
+.mech p{font-size:16px;line-height:1.9;color:var(--mid);margin-bottom:16px}
+.mech p strong{color:var(--dark);font-weight:700}
+.mech .term{color:var(--td);font-weight:700}
+
+/* OFFER */
+.offer{background:white;padding:80px 56px}
+.offer-inner{max-width:980px;margin:0 auto}
+.offer .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px;text-align:center}
+.offer h2{font-size:30px;font-weight:800;color:var(--dark);margin-bottom:48px;text-align:center}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.oc{background:var(--cream);border:1px solid var(--bdr);border-radius:18px;padding:32px 26px;display:flex;flex-direction:column}
+.oc-ico{font-size:30px;margin-bottom:18px}
+.oc h3{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:6px}
+.oc .dur{font-size:12px;font-weight:700;color:var(--td);background:var(--tl);padding:4px 12px;border-radius:20px;display:inline-block;align-self:flex-start;margin-bottom:14px}
+.oc p{font-size:14px;line-height:1.75;color:var(--mid)}
+
+/* TOPICS */
+.topics{background:var(--cream);padding:80px 56px}
+.topics-inner{max-width:880px;margin:0 auto}
+.topics .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px;text-align:center}
+.topics h2{font-size:30px;font-weight:800;color:var(--dark);margin-bottom:14px;text-align:center}
+.topics .sub{font-size:15px;color:var(--mid);text-align:center;margin-bottom:44px;line-height:1.7}
+.topic-list{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.topic{background:white;border:1px solid var(--bdr);border-radius:12px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start}
+.topic-dot{width:9px;height:9px;border-radius:50%;background:var(--teal);margin-top:7px;flex-shrink:0}
+.topic strong{display:block;font-size:15px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.topic span{font-size:13px;color:var(--mid);line-height:1.6}
+
+/* WHY */
+.why{background:white;padding:80px 56px}
+.why-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.why .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.why h2{font-size:28px;font-weight:800;color:var(--dark);margin-bottom:20px;line-height:1.3}
+.why p{font-size:16px;line-height:1.85;color:var(--mid);margin-bottom:14px}
+.why p strong{color:var(--dark);font-weight:600}
+.why-list{list-style:none;margin-top:8px}
+.why-list li{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-bottom:1px solid var(--bdr);font-size:14px;color:var(--dark)}
+.why-list li:last-child{border-bottom:none}
+.why-check{color:var(--teal);font-weight:800;flex-shrink:0}
+
+/* FORMATS */
+.formats{background:var(--cm);padding:64px 56px;text-align:center}
+.formats .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.formats h2{font-size:26px;font-weight:800;color:var(--dark);margin-bottom:36px}
+.fmt-row{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.fmt{text-align:center}
+.fmt .fico{font-size:26px;margin-bottom:10px}
+.fmt strong{display:block;font-size:15px;font-weight:800;color:var(--dark);margin-bottom:4px}
+.fmt span{font-size:13px;color:var(--mid)}
+
+/* PROOF placeholder */
+.proof{background:white;padding:64px 56px;text-align:center}
+.proof-inner{max-width:680px;margin:0 auto;border:1px dashed var(--bdr);border-radius:16px;padding:40px 28px;background:var(--cream)}
+.proof .st{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.proof p{font-size:15px;color:var(--mid);line-height:1.7}
+
+/* CTA */
+.cta-sec{background:linear-gradient(135deg,#6E2639,#471524);padding:80px 56px;text-align:center}
+.cta-sec h2{font-size:30px;font-weight:800;color:#fff;margin-bottom:14px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.3}
+.cta-sec p{font-size:16px;color:rgba(255,255,255,.72);line-height:1.8;max-width:520px;margin:0 auto 34px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none}
+
+/* FOOTER */
+.sf{background:#111;color:#888;padding:24px 56px;text-align:center;font-size:12px}
+.sf a{color:var(--teal);text-decoration:none}
+
+/* FLOATING WA */
+.waf{position:fixed;bottom:28px;left:28px;z-index:888;background:#25D366;color:#fff;border-radius:50px;padding:12px 20px;font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(37,211,102,.4)}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}.nl{display:none}
+  .hero{padding:56px 20px}.hero h1{font-size:30px}
+  .problem,.mech,.offer,.topics,.why,.formats,.proof,.cta-sec{padding:48px 20px}
+  .cost-grid,.offer-grid{grid-template-columns:1fr}
+  .topic-list{grid-template-columns:1fr}
+  .why-inner{grid-template-columns:1fr;gap:32px}
+  .hero-btns,.cta-btns{flex-direction:column;align-items:center}
+}
+
+/* ===== SITE REFRESH ===== */
+nav{background:var(--teal);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 2px 16px rgba(110,38,57,.20)}
+.logo{color:#fff}.logo em{color:var(--gold)}
+.nl a{color:rgba(255,255,255,.82)}.nl a:hover{color:var(--gold)}
+.nc{background:var(--gold);color:var(--td)}.nc:hover{background:#B5673F}
+.st{color:var(--gold-ink)}.ts{color:var(--gold-ink)}
+.fbsec .st,.fcta .st{color:var(--gold)}
+nav,section,.hero,.sf,footer{padding-inline:max(56px,calc((100% - 1200px) / 2))}
+.h2,.sh{font-weight:700}
+.pc,.sc,.pil,.tc,.bc{box-shadow:0 1px 3px rgba(110,38,57,.05);transition:transform .22s ease,box-shadow .22s ease}
+.pc:hover,.sc:hover,.pil:hover,.tc:hover,.bc:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(110,38,57,.10)}
+.sf{background:var(--teal)}
+@media(max-width:768px){nav,section,.hero,.sf,footer{padding-inline:20px}}
+.eic{width:16px;height:16px;vertical-align:-3px}
+.cost-ico .eic{width:24px;height:24px;color:var(--teal)}
+.oc-ico .eic{width:28px;height:28px;color:var(--teal)}
+.fico .eic{width:26px;height:26px;color:var(--teal)}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/message/7RMALPBGH2KQF1" class="waf" target="_blank">
+  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  וואטסאפ
+</a>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">יוליה קרמר <em class="mk"><svg width="24" height="24" viewBox="0 0 100 100" style="vertical-align:-5px" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="none" stroke="#E8D5C0" stroke-width="4"/><path d="M50 80 C50 55, 62 38, 80 30 C78 55, 66 72, 50 80 Z" fill="#FAF6F0"/><path d="M50 80 C50 55, 38 38, 20 30 C22 55, 34 72, 50 80 Z" fill="#C97B5A"/></svg></em></a>
+  <div class="nl">
+    <a href="about.html">אודותי</a>
+    <a href="services.html">שירותים</a>
+    <a href="magazine.html">מגזין</a>
+    <a href="organizations.html" class="active">לארגונים</a>
+    <a href="contact.html">צור קשר</a>
+  </div>
+  <a href="https://wa.me/message/7RMALPBGH2KQF1" class="nc">לתיאום פגישה</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="st">לארגונים</span>
+  <h1>הצוות שלכם עובד קשה.<br>הוא צריך <em>גוף ומוח שמחזיקים מעמד</em>.</h1>
+  <p>הרצאות, סדנאות ותוכניות לצוותים, עם כלים מדעיים שמשנים אנשים מבפנים, מדע מוכח שאפשר ליישם כבר ביום שאחרי.</p>
+  <div class="hero-btns">
+    <a href="https://wa.me/message/7RMALPBGH2KQF1" class="btn-main">לשיחה על צרכי הארגון</a>
+    <a href="#offer" class="btn-ghost">לראות פורמטים</a>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="problem-inner">
+    <span class="st">המחיר השקט</span>
+    <h2>צוות שנשאר חודשים במצב הישרדות עולה לכם, גם אם זה לא מופיע בדוח</h2>
+    <p class="lead">סטרס כרוני לא נראה ביומן, אבל הוא נמצא בכל החלטה, בכל פגישה ובכל מייל שנשלח בשתיים בלילה. כשמערכת העצבים של אנשים נשארת חודשים במצב הישרדות, זה משפיע על שלושה דברים שאתם כן מודדים.</p>
+    <div class="cost-grid">
+      <div class="cost">
+        <div class="cost-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.3"/></svg></div>
+        <h3>מיקוד וקבלת החלטות</h3>
+        <p>מוח שעמוס בקורטיזול מצמצם את שדה הקשב, מאט קבלת החלטות ומקצר את הפתיל. אנשים חכמים מתחילים לטעות בדברים פשוטים.</p>
+      </div>
+      <div class="cost">
+        <div class="cost-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>אנרגיה ונוכחות</h3>
+        <p>עייפות כרונית, נשימה שטחית וקריסת צהריים. הגוף עובד שעות, אבל פועל על רזרבה, בלי החיות שמייצרת עבודה טובה.</p>
+      </div>
+      <div class="cost">
+        <div class="cost-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>שחיקה ושימור</h3>
+        <p>שחיקה (Burnout) לא קורית ביום אחד. היא נבנית בשקט, עד שאנשים טובים מתנתקים, או עוזבים.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANISM -->
+<section class="mech">
+  <div class="mech-inner">
+    <span class="st">למה זה קורה</span>
+    <h2>המוח לא מבדיל בין דד-ליין לסכנת חיים</h2>
+    <p>בעולם המודרני, המוח לא תמיד מבחין בין סכנה אמיתית לבין דד-ליין, פקק או מייל דחוף. התוצאה, אנחנו נתקעים על דוושת הגז, <span class="term">המערכת הסימפתטית</span>. הגוף מוצף בקורטיזול ובאדרנלין, ולמצב הזה קוראים במדע <span class="term">עומס אלוסטטי (Allostatic Load)</span>.</p>
+    <p>הבעיה היא שהגוף לא יודע לצאת מזה לבד. <strong>הוא לא מתאפס כי החלטנו "לנוח יותר".</strong> הוא צריך הפעלה מכוונת של דוושת הברקס, <span class="term">המערכת הפאראסימפתטית</span>, שנשלטת על ידי עצב הוואגוס.</p>
+    <p>הבשורה הטובה, את דוושת הברקס הזו אפשר ללמוד להפעיל. בכלים פשוטים של נשימה, תנועה ותזונה, שאנשים יכולים לעשות בעצמם, במשרד, תוך דקות.</p>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer" id="offer">
+  <div class="offer-inner">
+    <span class="st">מה אני מביאה</span>
+    <h2>שלושה פורמטים, לפי מה שהארגון צריך</h2>
+    <div class="offer-grid">
+      <div class="oc">
+        <div class="oc-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+        <h3>הרצאה</h3>
+        <span class="dur">60–90 דקות</span>
+        <p>הרצאה חד-פעמית שמנגישה את המדע שמאחורי שחיקה, ויסות מערכת העצבים ותפקוד תחת עומס. נושאים מותאמים לקהל, מצוות הנהלה ועד כלל העובדים.</p>
+      </div>
+      <div class="oc">
+        <div class="oc-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.4-.6-.6-2.4z"/></svg></div>
+        <h3>סדנה מעשית</h3>
+        <span class="dur">חצי יום</span>
+        <p>מעבר מהבנה לתרגול. כלים שאפשר להתחיל ליישם כבר ביום שאחרי, נשימה, תזונה לביצועים ותנועה שמשחררת מתח שננעל בגוף.</p>
+      </div>
+      <div class="oc">
+        <div class="oc-ico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>תוכנית מלווה לצוות</h3>
+        <span class="dur">סדרת מפגשים</span>
+        <p>תהליך חודשי עם מעקב ובניית הרגלים, כדי שהשינוי יחזיק לאורך זמן ולא יישאר השראה של יום אחד.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPICS -->
+<section class="topics">
+  <div class="topics-inner">
+    <span class="st">נושאים</span>
+    <h2>על מה אפשר לדבר</h2>
+    <p class="sub">כל תוכן נבנה מחדש לקהל ולמטרה. אלה כמה מהנושאים המבוקשים:</p>
+    <div class="topic-list">
+      <div class="topic">
+        <div class="topic-dot"></div>
+        <div><strong>לעצור שחיקה לפני שהיא עוצרת אתכם</strong><span>איך לזהות את הסימנים המוקדמים, והכלים הראשונים לעצור את המגמה.</span></div>
+      </div>
+      <div class="topic">
+        <div class="topic-dot"></div>
+        <div><strong>ויסות מערכת העצבים בעומס</strong><span>איך מפעילים את "דוושת הברקס" של הגוף בזמן אמת, גם באמצע יום עמוס.</span></div>
+      </div>
+      <div class="topic">
+        <div class="topic-dot"></div>
+        <div><strong>תזונה לביצועים ולאנרגיה יציבה</strong><span>איך אוכלים כדי לייצב סוכר ולמנוע את קריסת הצהריים, בלי דיאטות.</span></div>
+      </div>
+      <div class="topic">
+        <div class="topic-dot"></div>
+        <div><strong>מנהיגות מגוף שלם</strong><span>מנהלים שמווסתים את עצמם מווסתים גם את הצוות. החוסן מתחיל מלמעלה.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section class="why">
+  <div class="why-inner">
+    <div>
+      <span class="st">למה אני</span>
+      <h2>מדע קשה לריפוי רך</h2>
+      <p>אני יוליה קרמר, דיאטנית קלינית עם B.Sc בביולוגיה מולקולרית ומדריכת יוגה מוסמכת. אני מחברת בין מה שקורה ברמת התא לבין מה שאנשים יכולים לעשות עם הגוף שלהם כבר היום.</p>
+      <p><strong>אני מביאה כלים מעשיים שנשארים עם הצוות הרבה אחרי שהמפגש נגמר.</strong> אני מביאה מנגנון, הסבר ברור למה זה קורה, ולמה הכלי עובד.</p>
+    </div>
+    <div>
+      <ul class="why-list">
+        <li><span class="why-check">✓</span><div>רקע מדעי אמיתי, לא ציטוטים ממחזרים</div></li>
+        <li><span class="why-check">✓</span><div>כלים פרקטיים שמתאימים ליום עמוס במשרד</div></li>
+        <li><span class="why-check">✓</span><div>בגובה העיניים, בלי "רוחני מדי"</div></li>
+        <li><span class="why-check">✓</span><div>כל תוכן מותאם לארגון ולאנשים שיהיו בחדר</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="formats">
+  <span class="st">פורמטים</span>
+  <h2>איפה ואיך שנוח לכם</h2>
+  <div class="fmt-row">
+    <div class="fmt"><div class="fico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><rect x="5" y="3" width="14" height="18" rx="1"/><line x1="9" y1="7" x2="9.01" y2="7"/><line x1="15" y1="7" x2="15.01" y2="7"/><line x1="9" y1="11" x2="9.01" y2="11"/><line x1="15" y1="11" x2="15.01" y2="11"/><path d="M10 21v-4h4v4"/></svg></div><strong>פרונטלי</strong><span>במשרדים שלכם</span></div>
+    <div class="fmt"><div class="fico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></svg></div><strong>זום</strong><span>לצוותים מבוזרים</span></div>
+    <div class="fmt"><div class="fico"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="eic"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg></div><strong>היברידי</strong><span>חלק בחדר, חלק מרחוק</span></div>
+  </div>
+</section>
+
+<!-- PROOF placeholder -->
+<section class="proof">
+  <div style="max-width:900px;margin:0 auto;text-align:center"><span class="st">המלצות על הסדנאות</span><h2 style="font-size:28px;font-weight:800;color:var(--dark);margin-bottom:8px">מה אמרו אחרי הסדנאות</h2><p style="font-size:14px;color:var(--mid);margin-bottom:32px">ביקורות אמיתיות מגוגל, מאנשים שהשתתפו בסדנאות.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;text-align:right"><div style="background:#fff;border:1px solid var(--bdr);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 3px rgba(110,38,57,.05)"><div style="display:flex;align-items:center;gap:8px"><svg aria-hidden="true" viewBox="0 0 48 48" width="18" height="18"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg><span style="color:var(--gold-ink);letter-spacing:1px;font-size:13px">★★★★★</span></div><p style="font-size:14px;color:var(--dark);line-height:1.7;margin:0">הסדנה הייתה כל כך מעניינת וקיבלתי המון כלים להתמודדות בעזרת תזונה נכונה במצבי רוח שונים יוליה המהממת נותנת כלים פרקטיים ליום יום וממש משנה דרך חיים מממליצה לכל אחד לעבור את הסדנה הזו 🫶</p><div style="display:flex;align-items:center;gap:10px;margin-top:auto"><div style="width:34px;height:34px;border-radius:50%;background:var(--tl);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--td);font-size:13px">A</div><span style="font-size:13px;font-weight:700;color:var(--dark)">Astar Moshe</span></div></div><div style="background:#fff;border:1px solid var(--bdr);border-radius:16px;padding:24px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 3px rgba(110,38,57,.05)"><div style="display:flex;align-items:center;gap:8px"><svg aria-hidden="true" viewBox="0 0 48 48" width="18" height="18"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg><span style="color:var(--gold-ink);letter-spacing:1px;font-size:13px">★★★★★</span></div><p style="font-size:14px;color:var(--dark);line-height:1.7;margin:0">אחת הסדנאות היותר משמעותיות שעברתי. סוף סוף סדנה עם הסברים שקל להבין וליישם, וכלים שהצלחתי להשתמש בהם ביום יום ולמדוד את ההשפעה. עם מרחב נעים ואינטימי.</p><div style="display:flex;align-items:center;gap:10px;margin-top:auto"><div style="width:34px;height:34px;border-radius:50%;background:var(--tl);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--td);font-size:13px">E</div><span style="font-size:13px;font-weight:700;color:var(--dark)">Emmanuel Naftaly</span></div></div></div><p style="font-size:14px;color:var(--mid);margin-top:30px">בין הגופים שעבדתי איתם: <strong style="color:var(--dark)">עמותת הנובה</strong>.</p></div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <h2>בואו נבנה משהו שמתאים בדיוק לצוות שלכם</h2>
+  <p>שיחה קצרה כדי להבין מה הארגון צריך, ומשם נתאים את הפורמט, הנושא וההיקף.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/message/7RMALPBGH2KQF1" class="btn-wa">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      לשיחת היכרות בוואטסאפ
+    </a>
+    <a href="contact.html" class="btn-ghost">לכל דרכי הקשר</a>
+  </div>
+</section>
+
+<footer class="sf">© 2026 יוליה קרמר · <a href="privacy.html">פרטיות</a> · <a href="accessibility.html">נגישות</a> · קליניקה בהרצליה + זום</footer>
+<script src="tracking.js" defer></script>
+</body>
+</html>
