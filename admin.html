@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>עריכת האתר · יוליה קרמר</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Assistant:wght@300;400;600&display=swap">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+  :root{--cream:#FAF6F0;--burg:#6E2639;--burg-d:#55182B;--terra:#C97B5A;--terra-ink:#A85535;--sand:#E8D5C0;--dark:#3B2A2A;--mid:#6B564C;--bdr:#E8DCCB}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:'Assistant',sans-serif;color:var(--dark);background:var(--cream);direction:rtl;display:flex;flex-direction:column;overflow:hidden}
+  h1,h2,h3,.logo{font-family:'Rubik',sans-serif;font-weight:500}
+
+  .bar{background:var(--burg);color:#fff;padding:11px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:0 2px 16px rgba(110,38,57,.25);z-index:5}
+  .bar .logo{font-size:16px;letter-spacing:1px;color:#fff;white-space:nowrap}
+  .bar .logo em{color:var(--sand);font-style:normal}
+  .bar .sep{flex:1}
+  select,.btn{font-family:'Assistant';font-size:14px}
+  select{padding:8px 12px;border-radius:8px;border:1px solid var(--bdr);background:#fff;color:var(--dark);max-width:280px}
+  .btn{border:none;border-radius:8px;padding:9px 18px;font-weight:600;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--terra);color:#fff}
+  .btn-primary:hover{background:#B5673F}
+  .btn-primary:disabled{background:#B79A88;cursor:default}
+  .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3)}
+  .btn-ghost:hover{background:rgba(255,255,255,.22)}
+  .status{font-size:13px;color:var(--sand);min-width:120px}
+  .status.ok{color:#CDEBD0}.status.warn{color:#F5D9C4}.status.err{color:#F6C9C0}
+
+  .stage{flex:1;display:flex;min-height:0}
+  .frameWrap{flex:1;position:relative;background:#efe7dd;min-width:0}
+  iframe{width:100%;height:100%;border:none;background:#fff}
+  .panel{width:270px;background:#fff;border-inline-start:1px solid var(--bdr);padding:18px 16px;overflow:auto}
+  .panel h3{font-size:13.5px;color:var(--burg);margin-bottom:8px;font-weight:500}
+  .panel .step{background:var(--cream);border:1px solid var(--bdr);border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:12.5px;color:var(--mid);line-height:1.7}
+  .panel .step b{color:var(--burg-d)}
+  .empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--mid);padding:30px}
+  .empty h2{color:var(--burg);font-size:22px;margin-bottom:10px}
+  .empty p{max-width:420px;line-height:1.8;margin-bottom:6px}
+  .hidden{display:none}
+
+  /* login gate */
+  .gate{position:fixed;inset:0;background:var(--burg);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:50;padding:30px}
+  .gate svg{margin-bottom:22px}
+  .gate h1{font-size:30px;color:#fff;margin-bottom:12px}
+  .gate p{color:var(--sand);max-width:440px;line-height:1.8;margin-bottom:26px}
+  .gate .btn-primary{font-size:16px;padding:13px 34px}
+  .overlay{position:absolute;inset:0;background:rgba(250,246,240,.78);display:flex;align-items:center;justify-content:center;font-family:'Rubik';color:var(--burg);font-size:16px;z-index:9}
+</style>
+</head>
+<body>
+
+<!-- LOGIN GATE -->
+<div class="gate" id="gate">
+  <svg width="70" height="70" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="#E8D5C0" stroke-width="2"/><path d="M50 80 C50 55, 62 38, 80 30 C78 55, 66 72, 50 80 Z" fill="#E8D5C0"/><path d="M50 80 C50 55, 38 38, 20 30 C22 55, 34 72, 50 80 Z" fill="#C97B5A"/></svg>
+  <h1>עריכת האתר</h1>
+  <p>כדי לערוך את תוכן האתר, התחברו עם המשתמש שלכם. רק משתמשים מורשים יכולים להיכנס.</p>
+  <button class="btn btn-primary" id="loginBtn">התחברות</button>
+</div>
+
+<!-- TOP BAR -->
+<div class="bar hidden" id="bar">
+  <div class="logo">יוליה קרמר · <em>עריכת האתר</em></div>
+  <select id="pageSelect"><option value="">בחרו עמוד לעריכה…</option></select>
+  <div class="sep"></div>
+  <div class="status" id="status">בחרו עמוד</div>
+  <button class="btn btn-primary" id="saveBtn" disabled>פרסום השינויים</button>
+  <button class="btn btn-ghost" id="logoutBtn">יציאה</button>
+</div>
+
+<div class="stage hidden" id="stage">
+  <div class="frameWrap">
+    <iframe id="frame" class="hidden"></iframe>
+    <div class="empty" id="empty">
+      <h2>עריכת הטקסטים באתר</h2>
+      <p>בחרו עמוד למעלה, לחצו על כל כותרת או פסקה כדי לשנות אותה, ואז "פרסום השינויים".</p>
+      <p>העיצוב, התמונות והקוד לא נפגעים, משתנה רק הטקסט שתבחרו.</p>
+    </div>
+    <div class="overlay hidden" id="overlay">טוען…</div>
+  </div>
+  <aside class="panel">
+    <h3>איך זה עובד</h3>
+    <div class="step"><b>1.</b> בחרו עמוד מהרשימה למעלה.</div>
+    <div class="step"><b>2.</b> עברו עם העכבר על טקסט, הוא יודגש. לחצו ושנו אותו במקום.</div>
+    <div class="step"><b>3.</b> לחצו <b>פרסום השינויים</b>. השינוי עולה לאתר החי תוך כדקה, אוטומטית.</div>
+    <div class="step">אפשר לערוך כמה עמודים, אחד אחרי השני. כל עמוד מתפרסם בנפרד.</div>
+    <div class="step" style="border-color:#C97B5A"><b>שימו לב:</b> משנים טקסט בלבד. לשינויי עיצוב או תמונות, פנו אליי.</div>
+  </aside>
+</div>
+
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const GG='/.netlify/git/github';
+  const BRANCH='main';
+
+  // pages available for editing (filename -> friendly Hebrew label)
+  const PAGES=[
+    ['index.html','דף הבית'],
+    ['about.html','אודות'],
+    ['services.html','שירותים'],
+    ['organizations.html','לארגונים'],
+    ['magazine.html','מגזין (רשימת המאמרים)'],
+    ['contact.html','צור קשר'],
+    ['download.html','עמוד ההורדה'],
+    ['privacy.html','מדיניות פרטיות'],
+    ['accessibility.html','הצהרת נגישות'],
+    ['burnout.html','מאמר · שחיקה'],
+    ['vagus.html','מאמר · עצב הוואגוס'],
+    ['cortisol.html','מאמר · קורטיזול'],
+    ['breathing.html','מאמר · נשימה'],
+    ['sleep.html','מאמר · שינה'],
+    ['hrv.html','מאמר · HRV'],
+    ['caffeine.html','מאמר · קפאין'],
+    ['blue-light.html','מאמר · אור כחול'],
+    ['sugar.html','מאמר · סוכר'],
+    ['protein.html','מאמר · חלבון'],
+    ['stress-eating.html','מאמר · אכילה תחת סטרס'],
+    ['microbiome.html','מאמר · מיקרוביום'],
+    ['mediterranean.html','מאמר · תזונה ים תיכונית'],
+    ['personalized-nutrition.html','מאמר · תזונה מותאמת אישית'],
+    ['omega3.html','מאמר · אומגה 3'],
+    ['yoga.html','מאמר · יוגה'],
+    ['movement.html','מאמר · תנועה'],
+    ['micro-movement.html','מאמר · מיקרו-תנועה'],
+    ['muscle-tension.html','מאמר · מתח בשרירים'],
+    ['exercise-mood.html','מאמר · פעילות ומצב רוח']
+  ];
+
+  let currentName=null, currentSha=null, dirty=false;
+
+  function setStatus(t,c){const s=$('status');s.textContent=t;s.className='status '+(c||'');}
+  function markDirty(){dirty=true;$('saveBtn').disabled=false;setStatus('יש שינויים שלא פורסמו','warn');}
+
+  // ---- auth ----
+  const idw=window.netlifyIdentity;
+  idw.on('init',user=>{ if(user) showApp(); });
+  idw.on('login',()=>{ idw.close(); showApp(); });
+  idw.on('logout',()=>{ location.reload(); });
+  idw.init();
+  $('loginBtn').onclick=()=>idw.open('login');
+  $('logoutBtn').onclick=()=>idw.logout();
+
+  async function token(){ return await idw.currentUser().jwt(); }
+
+  function showApp(){
+    $('gate').classList.add('hidden');
+    $('bar').classList.remove('hidden');
+    $('stage').classList.remove('hidden');
+    const sel=$('pageSelect');
+    PAGES.forEach(([f,l])=>{const o=document.createElement('option');o.value=f;o.textContent=l;sel.appendChild(o);});
+  }
+
+  // ---- utf8 <-> base64 ----
+  function utf8ToB64(s){return btoa(unescape(encodeURIComponent(s)));}
+  function b64ToUtf8(b){return decodeURIComponent(escape(atob(b.replace(/\s/g,''))));}
+
+  // ---- git gateway ----
+  async function ggGet(path){
+    const t=await token();
+    const r=await fetch(`${GG}/contents/${path}?ref=${BRANCH}`,{headers:{Authorization:'Bearer '+t}});
+    if(!r.ok) throw new Error('טעינה נכשלה ('+r.status+')');
+    const j=await r.json();
+    return {sha:j.sha,text:b64ToUtf8(j.content)};
+  }
+  async function ggPut(path,text,sha,message){
+    const t=await token();
+    const r=await fetch(`${GG}/contents/${path}`,{method:'PUT',headers:{Authorization:'Bearer '+t,'Content-Type':'application/json'},
+      body:JSON.stringify({message,content:utf8ToB64(text),sha,branch:BRANCH})});
+    if(!r.ok) throw new Error('פרסום נכשל ('+r.status+') '+(await r.text()).slice(0,120));
+    return await r.json();
+  }
+
+  // ---- visual editing inside iframe ----
+  const EDIT_TAGS=new Set(['H1','H2','H3','H4','H5','H6','P','LI','A','SPAN','BUTTON','TD','TH','BLOCKQUOTE','FIGCAPTION','SMALL','STRONG','EM','B','I','LABEL','SUMMARY','CAPTION']);
+  const SKIP=new Set(['SCRIPT','STYLE','NOSCRIPT','SVG','IFRAME','HEAD']);
+  function makeEditable(doc){
+    const st=doc.createElement('style');st.id='__ed_style';
+    st.textContent='.__ed{outline:1px dashed rgba(201,123,90,0);transition:outline-color .12s,background-color .12s;cursor:text}'+
+      '.__ed:hover{outline:1.5px dashed #C97B5A;background:rgba(201,123,90,.08)}'+
+      '[contenteditable="true"],[contenteditable="plaintext-only"]{outline:2px solid #6E2639 !important;background:rgba(110,38,57,.05)}';
+    doc.head&&doc.head.appendChild(st);
+    const w=doc.createTreeWalker(doc.body,NodeFilter.SHOW_ELEMENT,{acceptNode(el){
+      if(SKIP.has(el.tagName))return NodeFilter.FILTER_REJECT;
+      let t=false;for(const n of el.childNodes){if(n.nodeType===3&&n.textContent.trim().length){t=true;break;}}
+      if(t&&(EDIT_TAGS.has(el.tagName)||el.tagName==='DIV'))return NodeFilter.FILTER_ACCEPT;
+      return NodeFilter.FILTER_SKIP;
+    }});
+    const els=[];let n;while((n=w.nextNode()))els.push(n);
+    els.forEach(el=>el.classList.add('__ed'));
+    doc.addEventListener('click',e=>{const el=e.target.closest&&e.target.closest('.__ed');if(!el)return;
+      e.preventDefault();e.stopPropagation();if(el.getAttribute('contenteditable'))return;
+      try{el.contentEditable='plaintext-only';}catch(_){el.contentEditable='true';}
+      if(!el.isContentEditable)el.contentEditable='true';el.focus();},true);
+    doc.addEventListener('input',e=>{if(e.target.isContentEditable)markDirty();},true);
+    doc.addEventListener('blur',e=>{const el=e.target;if(el&&el.getAttribute&&el.getAttribute('contenteditable'))el.removeAttribute('contenteditable');},true);
+    doc.addEventListener('submit',e=>e.preventDefault(),true);
+  }
+  function serialize(doc){
+    const clone=doc.documentElement.cloneNode(true);
+    clone.querySelectorAll('#__ed_style').forEach(n=>n.remove());
+    clone.querySelectorAll('.__ed').forEach(n=>n.classList.remove('__ed'));
+    clone.querySelectorAll('[contenteditable]').forEach(n=>n.removeAttribute('contenteditable'));
+    clone.querySelectorAll('[class=""]').forEach(n=>n.removeAttribute('class'));
+    return '<!DOCTYPE html>\n'+clone.outerHTML;
+  }
+
+  // ---- load / save flow ----
+  $('pageSelect').onchange=async function(){
+    const name=this.value;if(!name)return;
+    if(dirty&&!confirm('יש שינויים שלא פורסמו בעמוד הנוכחי. להמשיך בלי לפרסם?')){this.value=currentName||'';return;}
+    $('overlay').classList.remove('hidden');$('overlay').textContent='טוען…';
+    try{
+      const {sha,text}=await ggGet(name);
+      currentName=name;currentSha=sha;dirty=false;$('saveBtn').disabled=true;
+      const frame=$('frame');
+      frame.onload=function(){makeEditable(frame.contentDocument);setStatus('עורכים: '+name,'ok');};
+      frame.srcdoc=text;
+      frame.classList.remove('hidden');$('empty').classList.add('hidden');
+    }catch(err){setStatus(err.message,'err');alert('שגיאה בטעינת העמוד: '+err.message);}
+    $('overlay').classList.add('hidden');
+  };
+
+  $('saveBtn').onclick=async function(){
+    if(!currentName)return;
+    const doc=$('frame').contentDocument;
+    if(doc.activeElement&&doc.activeElement.blur)doc.activeElement.blur();
+    const text=serialize(doc);
+    $('overlay').classList.remove('hidden');$('overlay').textContent='מפרסם…';
+    try{
+      const res=await ggPut(currentName,text,currentSha,'עריכת תוכן: '+currentName+' (דרך פאנל העריכה)');
+      currentSha=(res.content&&res.content.sha)||currentSha;
+      dirty=false;$('saveBtn').disabled=true;
+      setStatus('פורסם ✓ '+currentName+' · עולה לאתר תוך כדקה','ok');
+    }catch(err){setStatus(err.message,'err');alert('הפרסום נכשל: '+err.message+'\nהשינויים לא אבדו, אפשר לנסות שוב.');}
+    $('overlay').classList.add('hidden');
+  };
+
+  window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
+})();
+</script>
+</body>
+</html>
